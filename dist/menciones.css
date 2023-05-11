@@ -41,11 +41,13 @@
   box-shadow: 0px 0px 5px rgba(38, 78, 165, 0.5); /* Sombra del mismo color */
   border-radius: 5px; /* Radio de los bordes */
   padding: 2px; /* Espaciado interno del borde */
+  background-color: #fff;
 } 
 /* iniciamos por default en tahoma  y con tamaño 16px que es igual a tamaño 12 en word*/
 body {
   font-family: Tahoma, sans-serif;
   font-size: 16px; 
+  /* background-color: #8d1717; */
 }
 
 /* #editor {

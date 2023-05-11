@@ -511,7 +511,7 @@
           s = n.n(i)()(o());
         s.push([
           e.id,
-          '.ProseMirror-textblock-dropdown {\n  min-width: 3em;\n}\n\n.ProseMirror-menu {\n  margin: 0 -4px;\n  line-height: 1;\n}\n\n.ProseMirror-tooltip .ProseMirror-menu {\n  width: -webkit-fit-content;\n  width: fit-content;\n  white-space: pre;\n}\n\n.ProseMirror-menuitem {\n  margin-right: 3px;\n  display: inline-block;\n}\n\n.ProseMirror-menuseparator {\n  border-right: 1px solid #ddd;\n  margin-right: 3px;\n}\n\n.ProseMirror-menu-dropdown, .ProseMirror-menu-dropdown-menu {\n  font-size: 90%;\n white-space: break-space;\n}\n\n.ProseMirror-menu-dropdown {\n  vertical-align: 1px;\n  cursor: pointer;\n  position: relative;\n padding-right: 15px;\n}\n\n.ProseMirror-menu-dropdown-wrap {\n  padding: 1px 0 1px 4px;\n  display: inline-block;\n  position: relative;\n}\n\n.ProseMirror-menu-dropdown:after {\n  content: "";\n  border-left: 4px solid transparent;\n  border-right: 4px solid transparent;\n  border-top: 4px solid currentColor;\n  opacity: .6;\n  position: absolute;\n  right: 4px;\n  top: calc(50% - 2px);\n}\n\n.ProseMirror-menu-dropdown-menu, .ProseMirror-menu-submenu {\n  position: absolute;\n  background: white;\n  color: #666;\n  border: 1px solid #aaa;\n  padding: 2px;\n}\n\n.ProseMirror-menu-dropdown-menu {\n  z-index: 15;\n  min-width: 6em;\n \n height: 40vh; \n overflow-y: auto; \n overflow-x: hidden; \n border-radius: 5px; \n}\n\n.ProseMirror-menu-dropdown-item {\n  cursor: pointer;\n  padding: 2px 8px 2px 4px;\n border-bottom: 1px solid; \n border-image: linear-gradient(to right, white,  #2c6787, white); \n border-image-slice: 1; width:100px;}\n\n.ProseMirror-menu-dropdown-item:hover {\n  background: #049de0; \n border-radius: 5px; color: #fff;\n}\n\n.ProseMirror-menu-submenu-wrap {\n  position: relative;\n  margin-right: -4px;\n}\n\n.ProseMirror-menu-submenu-label:after {\n  content: "";\n  border-top: 4px solid transparent;\n  border-bottom: 4px solid transparent;\n  border-left: 4px solid currentColor;\n  opacity: .6;\n  position: absolute;\n  right: 4px;\n  top: calc(50% - 4px);\n}\n\n.ProseMirror-menu-submenu {\n  display: none;\n  min-width: 4em;\n  left: 100%;\n  top: -3px;\n}\n\n.ProseMirror-menu-active {\n  background: #51c8f8;\n color:#fff; \n  border-radius: 4px;\n}\n\n.ProseMirror-menu-disabled {\n  opacity: .3;\n}\n\n.ProseMirror-menu-submenu-wrap:hover .ProseMirror-menu-submenu, .ProseMirror-menu-submenu-wrap-active .ProseMirror-menu-submenu {\n  display: block;\n}\n\n.ProseMirror-menubar {\n  border-top-left-radius: inherit;\n  border-top-right-radius: inherit;\n  position: relative;\n  min-height: 1em;\n  color: #666;\n  padding: 1px 6px;\n  top: 0; left: 0; right: 0;\n  border-bottom: 1px solid silver;\n  background: white;\n  z-index: 10;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  overflow: visible;\n}\n\n.ProseMirror-icon {\n  display: inline-block;\n  line-height: .8;\n  vertical-align: -2px; /* Compensate for padding */\n  padding: 2px 8px;\n  cursor: pointer;\n}\n\n.ProseMirror-menu-disabled.ProseMirror-icon {\n  cursor: default;\n}\n\n.ProseMirror-icon svg {\n  fill: currentColor;\n  height: 1em;\n}\n\n.ProseMirror-icon span {\n  vertical-align: text-top;\n}\n',
+          '.ProseMirror-textblock-dropdown {\n  min-width: 3em;\n}\n\n.ProseMirror-menu {\n  margin: 0 -4px;\n  line-height: 1;\n}\n\n.ProseMirror-tooltip .ProseMirror-menu {\n  width: -webkit-fit-content;\n  width: fit-content;\n  white-space: pre;\n}\n\n.ProseMirror-menuitem {\n  margin-right: 3px;\n  display: inline-block;\n}\n\n.ProseMirror-menuseparator {\n  border-right: 1px solid #ddd;\n  margin-right: 3px;\n}\n\n.ProseMirror-menu-dropdown, .ProseMirror-menu-dropdown-menu {\n  font-size: 90%;\n white-space: break-space;\n}\n\n.ProseMirror-menu-dropdown {\n  vertical-align: 1px;\n  cursor: pointer;\n  position: relative;\n padding-right: 15px;\n}\n\n.ProseMirror-menu-dropdown-wrap {\n  padding: 1px 0 1px 4px;\n  display: inline-block;\n  position: relative;\n}\n\n.ProseMirror-menu-dropdown:after {\n  content: "";\n  border-left: 4px solid transparent;\n  border-right: 4px solid transparent;\n  border-top: 4px solid currentColor;\n  opacity: .6;\n  position: absolute;\n  right: 4px;\n  top: calc(50% - 2px);\n}\n\n.ProseMirror-menu-dropdown-menu, .ProseMirror-menu-submenu {\n  position: absolute;\n  background: white;\n  color: #666;\n  border: 1px solid #aaa;\n  padding: 2px;\n}\n\n.ProseMirror-menu-dropdown-menu {\n  z-index: 15;\n  min-width: 6em;\n \n height: 40vh; \n overflow-y: auto; \n overflow-x: hidden; \n border-radius: 5px; \n}\n\n.ProseMirror-menu-dropdown-item {\n  cursor: pointer;\n  padding: 2px 8px 2px 4px;\n border-bottom: 1px solid; \n border-image: linear-gradient(to right, white,  #2c6787, white); \n border-image-slice: 1; width:100px;}\n\n.ProseMirror-menu-dropdown-item:hover {\n  background: #049de0; \n border-radius: 5px; color: #fff;\n}\n\n.ProseMirror-menu-submenu-wrap {\n  position: relative;\n  margin-right: -4px;\n}\n\n.ProseMirror-menu-submenu-label:after {\n  content: "";\n  border-top: 4px solid transparent;\n  border-bottom: 4px solid transparent;\n  border-left: 4px solid currentColor;\n  opacity: .6;\n  position: absolute;\n  right: 4px;\n  top: calc(50% - 4px);\n}\n\n.ProseMirror-menu-submenu {\n  display: none;\n  min-width: 4em;\n  left: 100%;\n  top: -3px;\n}\n\n.ProseMirror-menu-active {\n  background: #51c8f8;\n color:#fff; \n  border-radius: 4px;\n}\n\n.ProseMirror-menu-disabled {\n  opacity: .3;\n}\n\n.ProseMirror-menu-submenu-wrap:hover .ProseMirror-menu-submenu, .ProseMirror-menu-submenu-wrap-active .ProseMirror-menu-submenu {\n  display: block;\n}\n\n.ProseMirror-menubar {\n border-radius: 5px; padding: 5px; \n  position: relative;\n  min-height: 1em;\n  color: #666;\n  top: 0; left: 0; right: 0;\n  border-bottom: 1px solid silver;\n  background: white;\n  z-index: 10;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  overflow: visible;\n}\n\n.ProseMirror-icon {\n  display: inline-block;\n  line-height: .8;\n  vertical-align: -2px; /* Compensate for padding */\n  padding: 2px 8px;\n  cursor: pointer;\n}\n\n.ProseMirror-menu-disabled.ProseMirror-icon {\n  cursor: default;\n}\n\n.ProseMirror-icon svg {\n  fill: currentColor;\n  height: 1em;\n}\n\n.ProseMirror-icon span {\n  vertical-align: text-top;\n}\n',
           "",
         ]);
         const a = s;
@@ -7278,6 +7278,9 @@
                 s = o.$cursor,
                 a = o.ranges;
               if ((i && !s) || !E(n.doc, a, e)) return !1;
+              // console.log(r,s);
+              // console.log(selcmb.value);
+console.log(oculto.value);
               if (r)
                 if (s) {
                   //[Lmendez]
@@ -7311,6 +7314,13 @@
                   /*se comento la parte de arriba ya que en cada seleccion
                   de tamaño de fuente realizaba el remover el storedMark*/
                 } else {
+                  var itemselected =
+                    t === null ? null : document.getElementById(selcmb.value);
+                  // console.log("prueba",itemselected,t)
+                  itemselected === null //asignamos el valor al titulo del combo box para ver la selccion del usuario
+                    ? null
+                    : (itemselected.firstChild.nodeValue = oculto.value);
+
                   for (var l = !1, c = n.tr, u = 0; !l && u < a.length; u++) {
                     var h = a[u],
                       f = h.$from,
@@ -7882,8 +7892,8 @@
           var n =
             "vert" == e ? (t > 0 ? "down" : "up") : t > 0 ? "right" : "left";
           return function (e, r, o) {
-            var elementoEnfoqueActual = document.activeElement;
-console.log(elementoEnfoqueActual);
+            // var elementoEnfoqueActual = document.activeElement;
+// console.log(elementoEnfoqueActual);
             var i = e.selection,
               s = t > 0 ? i.$to : i.$from,
               a = i.empty;
@@ -8877,6 +8887,7 @@ console.log(elementoEnfoqueActual);
                         dom: n, //aqui solo aplica el css no funcionalidad
                         update: function (e) {
                           if (t.select) {
+                            
                             // var r = t.select(e);
                             //  console.log(r);
                             // // // console.log(n.style.display);
@@ -8890,6 +8901,7 @@ console.log(elementoEnfoqueActual);
                               ((o = t.enable(e) || !1), R(n, "", !o)),
                             t.active)
                           ) {
+                            
                             //enviamos el parametro "" en la funcion R para que limpie todas las clases de los div
                             // console.log("entro al primer if del update");
                             var i = (o && t.active(e)) || !1;
@@ -8994,7 +9006,7 @@ console.log(elementoEnfoqueActual);
                             window.addEventListener(
                               "mouseup",
                               (s = function (e) {  
-                                // console.log("aqui",e.target.id,"oculto");
+                                // console.log("aqui",e.target.id,"oculto");  validamos el id para que no se oculte el div de items cuando se le de clic
                                 if (!(e.target.id === dvoculto.value))                              
                                 w(o) || a();
                                 dveditor.focus();
