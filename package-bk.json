@@ -1,0 +1,41 @@
+{
+  "name": "pruebaprosemirror",
+  "version": "1.0.0",
+  "description": "Pruebas del editor WYSIWYG ProseMirror.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generar": "babel ./src --out-dir ./babel --extensions \".ts,.tsx\" && webpack --mode production ./babel -o ./dist"
+  },
+  "keywords": [
+    "Prueba",
+    "ProseMirror",
+    "WYSIWYG",
+    "Editor"
+  ],
+  "author": "Jorge Lu",
+  "license": "ISC",
+  "dependencies": {
+    "prosemirror-dropcursor": "^1.6.1",
+    "prosemirror-example-setup": "^1.2.1",
+    "prosemirror-gapcursor": "^1.3.1",
+    "prosemirror-mentions": "^1.0.2",
+    "prosemirror-menu": "^1.2.1",
+    "prosemirror-model": "^1.19.0",
+    "prosemirror-schema-basic": "^1.2.1",
+    "prosemirror-state": "^1.4.2",
+    "prosemirror-view": "^1.30.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

@@ -1,0 +1,78 @@
+.suggestion-item-active {
+  background: #239ed4;
+  color: #fff;
+}
+.prosemirror-mention-node {
+  color: #239ed4;
+}
+.prosemirror-tag-node {
+  color: #239ed4;
+}
+.prosemirror-suggestion {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #999;
+}
+.suggestion-item-list {
+  background: #fff;
+  box-shadow: 0px 0px 5px #141414; 
+  border-radius: 5px; 
+   /* border: 6px solid #999;  */
+}
+
+.suggestion-item-list:hover{
+ cursor:pointer;
+}
+.suggestion-item {
+  padding: 5px;
+  border-radius: 5px;
+}
+.suggestion-item:before {
+  border-top: 1px solid;
+}
+
+#cmbdiv{
+  display: flex;
+  width: 100px;
+  align-items: center;
+}
+
+
+ .ProseMirror {
+  box-shadow: 0px 0px 5px rgba(38, 78, 165, 0.5); /* Sombra del mismo color */
+  border-radius: 5px; /* Radio de los bordes */
+  padding: 2px; /* Espaciado interno del borde */
+} 
+/* iniciamos por default en tahoma  y con tamaño 16px que es igual a tamaño 12 en word*/
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px; 
+}
+
+/* #editor {
+  border: 1px solid blue;
+}
+.ProseMirror {
+  position: relative;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  white-space: break-spaces;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0; 
+   the above doesn't seem to work in Edge 
+}
+
+.ProseMirror p:first-child,
+.ProseMirror h1:first-child,
+.ProseMirror h2:first-child,
+.ProseMirror h3:first-child,
+.ProseMirror h4:first-child,
+.ProseMirror h5:first-child,
+.ProseMirror h6:first-child {
+  margin-top: 10px;
+}
+.ProseMirror {
+  padding: 4px 8px 4px 14px;
+  line-height: 1.2;
+  outline: none;
+} */

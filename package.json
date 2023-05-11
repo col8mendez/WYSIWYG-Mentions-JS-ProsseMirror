@@ -1,0 +1,18 @@
+{
+  "name": "prosemirror",
+  "version": "1.0.0",
+  "description": "npm init",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prosemirror-mentions": "^1.0.2",
+    "prosemirror-schema-basic": "^1.2.1",
+    "prosemirror-schema-list": "^1.2.2",
+    "prosemirror-suggest": "^2.0.4"
+  }
+}
