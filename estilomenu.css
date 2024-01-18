@@ -1,0 +1,13 @@
+#idmenu span{
+    transition: background-color 1s;     
+}
+
+#idmenu span:hover{
+    background-color: lightblue;
+    border-radius: 0.5px;
+}
+
+#idmenu span:active {
+    color:white;
+    background-color: blue;
+}
