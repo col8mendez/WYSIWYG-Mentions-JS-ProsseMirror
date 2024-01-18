@@ -387,7 +387,8 @@
             ],
             [
               m(e.marks.strong, "Negrita", c.icons.strong),
-              m(e.marks.em, "Cursiva", c.icons.em),
+              m(e.marks.em, "Cursiva", c.icons.em),  
+                          
             ],
             [
               g("Listas numeradas", [
@@ -427,6 +428,7 @@
                 }),
               ]),
             ],
+            [],
           ];
         }
         function w(e, t, n) {
@@ -7280,7 +7282,7 @@
               if ((i && !s) || !E(n.doc, a, e)) return !1;
               // console.log(r,s);
               // console.log(selcmb.value);
-console.log(oculto.value);
+// console.log(oculto.value);
               if (r)
                 if (s) {
                   //[Lmendez]
@@ -7288,7 +7290,7 @@ console.log(oculto.value);
                   // console.log("n",n.doc);
                   //   console.log("s",s.marks);
                   // console.log(e.name, "n", n.storedMarks, "s", s.marks);
-
+                  dveditor = document.getElementById("dvEditor"); 
                   var itemselected =
                     t === null ? null : document.getElementById(selcmb.value);
                   // console.log("prueba",itemselected,t)
@@ -9342,7 +9344,7 @@ console.log(oculto.value);
                   t.dom.parentNode.replaceChild(this.wrapper, t.dom),
                 this.wrapper.appendChild(t.dom);
               this.wrapper.childNodes[1].childNodes[0].id = "pid";
-              // console.log(this.wrapper.childNodes[1].childNodes[0].id);
+              //  console.log(this.wrapper.childNodes[1].childNodes[0].id);
               var i = O(this.editorView, this.options.content),
                 s = i.dom,
                 a = i.update;
