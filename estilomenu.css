@@ -11,3 +11,20 @@
     color:white;
     background-color: blue;
 }
+
+p{
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px gray; /* offsetX, offsetY, blurRadius, color */
+    padding: 10px; /* Añadir un poco de espacio alrededor del contenido del párrafo */
+}
+
+body{
+    width:98%;
+    height: 90vh;    
+}
+
+#dvEditor{
+    /* padding: 10px; */
+    width:100%;
+    height:90vh;
+}

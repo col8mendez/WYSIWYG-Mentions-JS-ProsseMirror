@@ -20286,13 +20286,14 @@
               {
                 key: "addHackNode",
                 value: function (e, t) {
+                  
                   if (
                     t == this.top &&
                     this.index < t.children.length &&
                     t.children[this.index].matchesHack(e)
                   )
-                    this.index++;
-                  else {
+                  this.index++;                  
+                    else {                    
                     var n = document.createElement(e);
                     "IMG" == e &&
                       ((n.className = "ProseMirror-separator"), (n.alt = "")),

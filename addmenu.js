@@ -22,7 +22,10 @@ document.addEventListener("DOMContentLoaded",function() {
 var npagina = document.getElementById("npagina");
 
 npagina.addEventListener("click", function() {
-   alert('click a nueva pagina');
+
+   var editor = document.getElementById("dvEditor");
+   var p = document.createElement("P");
+   editor.appendChild(p);
 })
 })
 
