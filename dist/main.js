@@ -9343,7 +9343,7 @@
                 t.dom.parentNode &&
                   t.dom.parentNode.replaceChild(this.wrapper, t.dom),
                 this.wrapper.appendChild(t.dom);
-              this.wrapper.childNodes[1].childNodes[0].id = "pid";
+              // this.wrapper.childNodes[1].childNodes[0].id = "pid";
               //  console.log(this.wrapper.childNodes[1].childNodes[0].id);
               var i = O(this.editorView, this.options.content),
                 s = i.dom,
@@ -20030,7 +20030,7 @@
         }
         function Re(e) {
           var t = e.nextSibling;
-          return e.parentNode.removeChild(e), t;
+            return e.parentNode.removeChild(e), t;
         }
         var Pe = (function () {
           function e(t, n, r) {
@@ -20265,11 +20265,13 @@
               {
                 key: "addTextblockHacks",
                 value: function () {
+                  // console.log("fue llamado");
                   for (
                     var e = this.top.children[this.index - 1], t = this.top;
                     e instanceof ye;
 
                   )
+                  // console.log(ye);
                     e = (t = e).children[t.children.length - 1];
                   (!e ||
                     !(e instanceof be) ||
@@ -20286,24 +20288,46 @@
               {
                 key: "addHackNode",
                 value: function (e, t) {
-                  
-                  if (
-                    t == this.top &&
-                    this.index < t.children.length &&
-                    t.children[this.index].matchesHack(e)
-                  )
+                  // var insertaBR = document.getElementById("insertaBR").value;
+               
+                  if (t == this.top && this.index < t.children.length && t.children[this.index].matchesHack(e))
+                  {
                   this.index++;                  
-                    else {                    
-                    var n = document.createElement(e);
-                    "IMG" == e &&
-                      ((n.className = "ProseMirror-separator"), (n.alt = "")),
-                      "BR" == e && (n.className = "ProseMirror-trailingBreak");
-                    var r = new Se(this.top, [], n, null);
-                    t != this.top
-                      ? t.children.push(r)
-                      : t.children.splice(this.index++, 0, r),
-                      (this.changed = !0);
                   }
+                  else {     
+                  // if (insertaBR.Value == "0")
+                  // {        
+                         
+                    var n = document.createElement(e);
+
+                    // console.log(t);
+                    // console.log(insertaBR);
+                    // console.log(n);
+                    // if(insertaBR == "0")
+                    // {
+                    "img" == e && ((n.className = "ProseMirror-separator"), (n.alt = "")),
+                      "BR" == e && (n.className = "ProseMirror-trailingBreak");
+                      // console.log("paso en main en 0");
+                    // var r = new Se(thistop, [], n, null);
+                    // }
+                    // else
+                    //   {
+                    //     // console.log(n);
+                    //     "IMG" == e && ((n.className = "ProseMirror-separator"), (n.alt = "")),
+                    //     "BR" == e && (n.className = "Separador");
+                    //     // console.log(n);
+                    //     document.getElementById("insertaBR").value = "0";
+                    //     console.log("paso en main");
+                    //   }
+                    var r = new Se(this.top, [], n, null);
+                    t != this.top ? t.children.push(r) : t.children.splice(this.index++, 0, r), (this.changed = !0);
+                  //     }
+                  // else
+                  // {
+                  //   insertaBR.value = "0";
+                  // }
+                  }
+                  
                 },
               },
               {
@@ -23644,6 +23668,7 @@
                           : "reset",
                       u = r || !this.docView.matchesNode(e.doc, l, a);
                     (!u && e.selection.eq(n.selection)) || (o = !0);
+                    // console.log(l);
                     var h,
                       f,
                       d,
@@ -24166,10 +24191,15 @@
               e
             );
           })();
-        function xn(e) {
+        function xn(e, identificador) {
+          // if(e.dom.localName == "div" && e.dom.id == "")
+          // {
+          //   var dvprincipal = e.dom;
+          //   console.log(dvprincipal);
+          // }
           var t = Object.create(null);
           return (
-            (t.id = "dvEditor"),
+            (t.id = (identificador == null) ? "dvEditor" : identificador),
             (t.class = "ProseMirror"),
             (t.contenteditable = String(e.editable)),
             (t.translate = "no"),
