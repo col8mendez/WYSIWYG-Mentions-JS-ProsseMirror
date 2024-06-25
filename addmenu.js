@@ -20,25 +20,29 @@ document.addEventListener("DOMContentLoaded",function() {
    //  nDiv.title = ("NuevaPagina");
    //  var tdiv = document.createTextNode("N");
    //  nDiv.appendChild(tdiv);
-    nspan.appendChild(nimg);
+   nspan.appendChild(nimg);
+   
    //  nspan.appendChild(nDiv);
-   menu.appendChild(nspan);
+   menu.appendChild(nspan); 
+   
+   
 
 var npagina = document.getElementById("npagina");
 npagina.addEventListener("click", function() {
 
    
-
+  
    var dveditor = document.getElementById("dvEditor");
    var padre = document.getElementById("dvPrincipal");
    var imagenSeparador = document.createElement("img");
-   imagenSeparador.id="img1";
+   // imagenSeparador.id="img";
    imagenSeparador.src = "img/FIN_PAGINA.png";
    imagenSeparador.style.width = "20px";
    imagenSeparador.alt="Fin de la pagina";
    // imagenSeparador.classList.add("ProseMirror-separator");
    dveditor.appendChild(imagenSeparador);
    dveditor.innerHTML = dveditor.innerHTML + '<P>';
+
 
    var ultimoParrafo = dveditor.lastElementChild;
    // console.log(ultimoParrafo);
@@ -116,5 +120,7 @@ function LimpiarNodoFinPagina()
       }
    }
 }
-})
 
+
+}
+)

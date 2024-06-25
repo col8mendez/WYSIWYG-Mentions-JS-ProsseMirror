@@ -339,49 +339,47 @@
             [ //estos tamaños son eqiovalentes a los tamaños de letra en word
               g("Tamaño de fuente", [
                 m(e.marks.tamanio_fuente, "1", void 0, { tamanioFuente: 1 }),
-                m(e.marks.tamanio_fuente, "2", void 0, { tamanioFuente: 2.5 }),
-                m(e.marks.tamanio_fuente, "3", void 0, { tamanioFuente: 4 }),
-                m(e.marks.tamanio_fuente, "4", void 0, { tamanioFuente: 5.5 }),
-                m(e.marks.tamanio_fuente, "5", void 0, { tamanioFuente: 6.5 }),
-                m(e.marks.tamanio_fuente, "6", void 0, { tamanioFuente: 8 }),
-                m(e.marks.tamanio_fuente, "7", void 0, { tamanioFuente: 9.5 }),
-                m(e.marks.tamanio_fuente, "8", void 0, { tamanioFuente: 10.5 }),
-                m(e.marks.tamanio_fuente, "9", void 0, { tamanioFuente: 12 }),
-                m(e.marks.tamanio_fuente, "10", void 0, { tamanioFuente: 13.5 }),
-                m(e.marks.tamanio_fuente, "11", void 0, { tamanioFuente: 14.5 }),
-                m(e.marks.tamanio_fuente, "12", void 0, { tamanioFuente: 16 }),
-                m(e.marks.tamanio_fuente, "13", void 0, { tamanioFuente: 17.5 }),
-                m(e.marks.tamanio_fuente, "14", void 0, { tamanioFuente: 18.5 }),
-                m(e.marks.tamanio_fuente, "15", void 0, { tamanioFuente: 20 }),
-                m(e.marks.tamanio_fuente, "16", void 0, { tamanioFuente: 21.5 }),
-                m(e.marks.tamanio_fuente, "17", void 0, { tamanioFuente: 22.5 }),
-                m(e.marks.tamanio_fuente, "18", void 0, { tamanioFuente: 24 }),
-                m(e.marks.tamanio_fuente, "19", void 0, { tamanioFuente: 25 }),
-                m(e.marks.tamanio_fuente, "20", void 0, { tamanioFuente: 26.5 }),
+                m(e.marks.tamanio_fuente, "2", void 0, { tamanioFuente: 2 }),
+                m(e.marks.tamanio_fuente, "3", void 0, { tamanioFuente: 3 }),
+                m(e.marks.tamanio_fuente, "4", void 0, { tamanioFuente: 4 }),
+                m(e.marks.tamanio_fuente, "5", void 0, { tamanioFuente: 5 }),
+                m(e.marks.tamanio_fuente, "6", void 0, { tamanioFuente: 6 }),
+                m(e.marks.tamanio_fuente, "7", void 0, { tamanioFuente: 7 }),
+                m(e.marks.tamanio_fuente, "8", void 0, { tamanioFuente: 8 }),
+                m(e.marks.tamanio_fuente, "9", void 0, { tamanioFuente: 9 }),
+                m(e.marks.tamanio_fuente, "10", void 0, { tamanioFuente: 10 }),
+                m(e.marks.tamanio_fuente, "11", void 0, { tamanioFuente: 11 }),
+                m(e.marks.tamanio_fuente, "12", void 0, { tamanioFuente: 12 }),
+                m(e.marks.tamanio_fuente, "13", void 0, { tamanioFuente: 13 }),
+                m(e.marks.tamanio_fuente, "14", void 0, { tamanioFuente: 14 }),
+                m(e.marks.tamanio_fuente, "15", void 0, { tamanioFuente: 15 }),
+                m(e.marks.tamanio_fuente, "16", void 0, { tamanioFuente: 16 }),
+                m(e.marks.tamanio_fuente, "17", void 0, { tamanioFuente: 17 }),
+                m(e.marks.tamanio_fuente, "18", void 0, { tamanioFuente: 18 }),
+                m(e.marks.tamanio_fuente, "19", void 0, { tamanioFuente: 19 }),
+                m(e.marks.tamanio_fuente, "20", void 0, { tamanioFuente: 20 }),
               ]),
             ],
             [
               g("Tipo de fuente", [
                 m(e.marks.tipo_fuente, "Arial", void 0, {
                   tipoFuente: f.tipoFuente.arial,
-                }),
-                m(e.marks.tipo_fuente, "Times New Roman", void 0, {
-                  tipoFuente: f.tipoFuente.timesNewRoman,
-                }),
-                m(e.marks.tipo_fuente, "Courier New", void 0, {
+                }),            
+                m(e.marks.tipo_fuente, "Candara", void 0, {
                   tipoFuente: f.tipoFuente.courierNew,
                 }),
-                m(e.marks.tipo_fuente, "sans-seri", void 0, {
-                  tipoFuente: f.tipoFuente.sansserif,
+                m(e.marks.tipo_fuente, "Comic Sans MS", void 0, {
+                  tipoFuente: f.tipoFuente.courierNew,
+                }),
+                
+                m(e.marks.tipo_fuente, "Courier New", void 0, {
+                  tipoFuente: f.tipoFuente.courierNew,
                 }),
                 m(e.marks.tipo_fuente, "Helvetica", void 0, {
                   tipoFuente: f.tipoFuente.Helvetica,
                 }),
-                m(e.marks.tipo_fuente, "Lucida Console", void 0, {
-                  tipoFuente: f.tipoFuente.LucidaConsole,
-                }),
-                m(e.marks.tipo_fuente, "monospace", void 0, {
-                  tipoFuente: f.tipoFuente.monospace,
+                m(e.marks.tipo_fuente, "Times New Roman", void 0, {
+                  tipoFuente: f.tipoFuente.timesNewRoman,
                 }),
               ]),
             ],
@@ -454,7 +452,7 @@
                   return [
                     "span",
                     {
-                      style: "font-size: ".concat(e.attrs.tamanioFuente, "px;"),
+                      style: "font-size: ".concat(e.attrs.tamanioFuente, "pt;"),
                     },
                     0,
                   ];
@@ -4166,11 +4164,13 @@
               (s = document.createElement("div")),
                 t.split(/(?:\r\n?|\n)+/).forEach((e) => {
                   let t = s.appendChild(document.createElement("p"));
+                  // console.log("entro");
                   e && t.appendChild(i.serializeNode(r.text(e, n)));
                 });
             }
           } else
             e.someProp("transformPastedHTML", (t) => {
+              
               n = t(n, e);
             }),
               (s = (function (e) {
@@ -5971,7 +5971,7 @@
                 getAttrs: (e) => ({
                   id: e.getAttribute("data-mention-id"),
                   name: e.getAttribute("data-mention-name"),
-                  // email: e.getAttribute("data-mention-email"),
+                  //  email: e.getAttribute("data-mention-email"),
                 }),
               },
             ],
@@ -7333,8 +7333,10 @@
                     var m = a[p],
                       v = m.$from,
                       g = m.$to;
-                    if (l) c.removeMark(v.pos, g.pos, e);
+                    if (l){ c.removeMark(v.pos, g.pos, e);
+                    }
                     else {
+                      // console.log("entro aqui");
                       var y = v.pos,
                         k = g.pos,
                         w = v.nodeAfter,
@@ -8834,9 +8836,11 @@
                                   );
                             } else if (e.dom) {
                               t.appendChild(e.dom.cloneNode(!0));
+                              
                             } else {
                               var a = e.text,
                                 l = e.css;
+                                
                               (t.appendChild(
                                 document.createElement("span")
                               ).textContent = a || ""),
@@ -8868,7 +8872,8 @@
                       t.class && n.classList.add(t.class),
                       t.css && (n.style.cssText += t.css),
                       n.addEventListener("mouseup", function (r) {
-                        r.preventDefault(),
+                        // console.log(n, r, e);
+                        // r.preventDefault(),
                           //  console.log (n.title);
                           //  console.log("aqui pasa",r,n);
                           (oculto.value = n.title);
@@ -13298,6 +13303,7 @@
                 {
                   key: "renderSpec",
                   value: function (t, n) {
+                    
                     var r =
                       arguments.length > 2 && void 0 !== arguments[2]
                         ? arguments[2]
@@ -13310,9 +13316,10 @@
                       i = n[0],
                       s = i.indexOf(" ");
                     s > 0 && ((r = i.slice(0, s)), (i = i.slice(s + 1)));
-                    var a = r ? t.createElementNS(r, i) : t.createElement(i),
+                    var a = r ? t.createElementNS(r, i) : t.createElement(i),//aqui se crean los objetos
                       l = n[1],
                       c = 1;
+                      // console.log(a,r,i);
                     if (
                       l &&
                       "object" == g(l) &&
@@ -13424,11 +13431,36 @@
             paragraph: {
               content: "inline*",
               group: "block",
-              parseDOM: [{ tag: "p" }],
+              parseDOM: [{ tag: "p" },
+              ],
               toDOM: function () {
                 return o;
               },
             },
+            span: {//se agrego para que el editor lograra interpretar los bloques de span ya que los eliminaba 
+              inline: true,
+              group: "inline",
+              content: "inline",
+              attrs: {
+                id: { default:null},
+                style: {default:null},
+                },
+                parseDOM: [
+                  {
+                    tag: "span",
+                    getAttrs: function(dom) {
+                      return{
+                        id: dom.getAttribute("id"),
+                        style: dom.getAttribute("style")
+                      };
+                    }
+                  }
+                ],
+                toDOM: function(node){
+                  let spn = node.attrs;
+                  return ["span", {id: spn.id, style: spn.style}, 0]
+                }
+              },            
             blockquote: {
               content: "block+",
               group: "block",
@@ -13477,6 +13509,7 @@
             image: {
               inline: !0,
               attrs: {
+                id: {default: null},
                 src: {},
                 alt: { default: null },
                 title: { default: null },
@@ -13487,17 +13520,19 @@
                 {
                   tag: "img[src]",
                   getAttrs: function (e) {
-                    return {
+                    return {  
+                      id: e.getAttribute("id"),                    
                       src: e.getAttribute("src"),
                       title: e.getAttribute("title"),
                       alt: e.getAttribute("alt"),
                     };
-                  },
+                  },                  
                 },
               ],
               toDOM: function (e) {
                 var t = e.attrs;
-                return ["img", { src: t.src, alt: t.alt, title: t.title }];
+                // console.log(t);
+                return ["img", { id: t.id, src: t.src, alt: t.alt, title: t.title }];
               },
             },
             hard_break: {
@@ -13569,7 +13604,7 @@
                   getAttrs: function (e) {
                     return /^(bold(er)?|[5-9]\d{2,})$/.test(e) && null;
                   },
-                },
+                },                
               ],
               toDOM: function () {
                 return h;
@@ -14808,6 +14843,7 @@
               {
                 key: "insertText",
                 value: function (e, t, n) {
+                  
                   var r = this.doc.type.schema;
                   if (null == t)
                     return e
@@ -17617,6 +17653,7 @@
               {
                 key: "removeMark",
                 value: function (e, t, n) {
+                  
                   return (
                     (function (e, t, n, r) {
                       var o = [],
@@ -19394,7 +19431,8 @@
                         else
                           for (var k = 0; k < e.childCount; k++) {
                             var w = e.child(k);
-                            r(w, o, t.forChild(i, w), k), (i += w.nodeSize);
+                            r(w, o, t.forChild(i, w), k), (i += w.nodeSize); //original
+                            // r(w, o, t.forChild(i, w), k), (i += w.content.size);
                           }
                       })(
                         this.node,
@@ -19912,14 +19950,18 @@
               n
             );
           })(ke);
-        function Me(e, t, n) {
+        function Me(e, t, n) { //en esta funcion se valida lo ingresado en el div dvEditor (cuando se escribe o se ingresa un span o carga informacion)
           for (var r = e.firstChild, o = !1, i = 0; i < t.length; i++) {
             var s = t[i],
               a = s.dom;
-            if (a.parentNode == e) {
+              // a = s.dom.parentNode == null ? s.parent : s.dom;
+            if (a.parentNode == e || a == e) {
               for (; a != r; ) (r = Re(r)), (o = !0);
               r = r.nextSibling;
-            } else (o = !0), e.insertBefore(a, r);
+            } 
+            // else if (a.localName == 'p' || a.localName == 'strong')
+            // {}
+            else (o = !0), e.insertBefore(a, r);
             if (s instanceof ye) {
               var l = r ? r.previousSibling : e.lastChild;
               Me(s.contentDOM, s.children, n),
@@ -20028,8 +20070,11 @@
             if (!e[n].type.eq(t[n].type)) return !1;
           return !0;
         }
-        function Re(e) {
+        function Re(e) { //en esta funcion elimina las etiquetas segun validaciones del prosemirror, quitando estilos
           var t = e.nextSibling;
+          // if(e.localName == 'p' || e.localName == 'strong' || e.localName == 'span')
+          //   return false;
+          // else
             return e.parentNode.removeChild(e), t;
         }
         var Pe = (function () {
@@ -20236,6 +20281,7 @@
               {
                 key: "addNode",
                 value: function (e, t, n, r, o) {
+                  // console.log(e,t,n,r,o);//aqui ingresa todo lo que se esta agregando
                   this.top.children.splice(
                     this.index++,
                     0,
@@ -20273,10 +20319,7 @@
                   )
                   // console.log(ye);
                     e = (t = e).children[t.children.length - 1];
-                  (!e ||
-                    !(e instanceof be) ||
-                    /\n$/.test(e.node.text) ||
-                    (this.view.requiresGeckoHackNode &&
+                  (!e || !(e instanceof be) || /\n$/.test(e.node.text) || (this.view.requiresGeckoHackNode &&
                       /\s$/.test(e.node.text))) &&
                     ((L || j) &&
                       e &&
@@ -20836,6 +20879,7 @@
               (s = document.createElement("div")),
                 t.split(/(?:\r\n?|\n)+/).forEach(function (e) {
                   var t = s.appendChild(document.createElement("p"));
+                  
                   e && t.appendChild(d.serializeNode(f.text(e, h)));
                 });
             }
@@ -23144,7 +23188,7 @@
                 (this.editable = On(this)),
                 Mn(this),
                 (this.nodeViews = Cn(this)),
-                (this.docView = we(
+                (this.docView = we( //aqui crea el dvEditor
                   this.state.doc,
                   xn(this),
                   cn(this),
@@ -23572,6 +23616,7 @@
                   for (var n in kt) t(n);
                   L &&
                     e.dom.addEventListener("input", function () {
+                      
                       return null;
                     }),
                     Mt(e);
@@ -24162,6 +24207,7 @@
                           e.dom.addEventListener("beforeinput", n, !0),
                             document.execCommand("indent"),
                             e.dom.removeEventListener("beforeinput", n, !0);
+                            
                           var r = t.startContainer,
                             o = t.startOffset,
                             i = t.endContainer,
@@ -24198,11 +24244,12 @@
           //   console.log(dvprincipal);
           // }
           var t = Object.create(null);
+          // console.log(t);
           return (
             (t.id = (identificador == null) ? "dvEditor" : identificador),
             (t.class = "ProseMirror"),
             (t.contenteditable = String(e.editable)),
-            (t.translate = "no"),
+            (t.translate = "no"),            
             e.someProp("attributes", function (n) {
               if (("function" == typeof n && (n = n(e.state)), n))
                 for (var r in n)
@@ -24430,9 +24477,10 @@
         c = n(394),
         u = n(209);
       n(662), n(340), n(611);
+
       var h = new e.Schema({
-          nodes: (0, a.agregarNodosListas)(
-            (0, i.addTagNodes)((0, i.addMentionNodes)(t.schema.spec.nodes)),
+          nodes:  (0, a.agregarNodosListas)
+                  ((0, i.addTagNodes)((0, i.addMentionNodes)(t.schema.spec.nodes)),
             "paragraph block*",
             "block"
           ),
@@ -24449,6 +24497,8 @@
         //   { name: "Juan Pérez", id: 108, email: "jperez@canella.com.gt" },
         // ])
       );
+
+
       var d = r.EditorState.create({ schema: h, plugins: f });
       new o.EditorView(document.body, { state: d });
     })();
