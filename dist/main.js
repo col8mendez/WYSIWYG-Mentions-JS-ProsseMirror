@@ -3,7 +3,7 @@
   var oculto = document.getElementById("hcampo");
   var selcmb = document.getElementById("cmbseleccionado");
   var dvoculto = document.getElementById("divclic");
-  var dveditor ;
+  var dveditor = document.getElementById("dvEditor");;
 
   var e = {
       717: (e, t, n) => {
@@ -361,17 +361,16 @@
               ]),
             ],
             [
-              g("Tipo de fuente", [
+              g("Tipo de fuente", [                
                 m(e.marks.tipo_fuente, "Arial", void 0, {
                   tipoFuente: f.tipoFuente.arial,
                 }),            
                 m(e.marks.tipo_fuente, "Candara", void 0, {
-                  tipoFuente: f.tipoFuente.courierNew,
+                  tipoFuente: f.tipoFuente.candara,
                 }),
                 m(e.marks.tipo_fuente, "Comic Sans MS", void 0, {
-                  tipoFuente: f.tipoFuente.courierNew,
-                }),
-                
+                  tipoFuente: f.tipoFuente.comicsans,
+                }),                
                 m(e.marks.tipo_fuente, "Courier New", void 0, {
                   tipoFuente: f.tipoFuente.courierNew,
                 }),
@@ -380,6 +379,15 @@
                 }),
                 m(e.marks.tipo_fuente, "Times New Roman", void 0, {
                   tipoFuente: f.tipoFuente.timesNewRoman,
+                }),        
+                m(e.marks.tipo_fuente, "Lucida Console", void 0, {
+                  tipoFuente: f.tipoFuente.lucidaConsole,
+                }),        
+                m(e.marks.tipo_fuente, "Verdana", void 0, {
+                  tipoFuente: f.tipoFuente.verdana,
+                }),
+                m(e.marks.tipo_fuente, "Calibri", void 0, {
+                  tipoFuente: f.tipoFuente.calibri,
                 }),
               ]),
             ],
@@ -482,12 +490,14 @@
           (t.tipoFuente = n),
           (function (e) {
             (e.arial = '"Arial"'),
+            (e.candara = '"Candara"'),
               (e.Helvetica = '"Helvetica"'),
-              (e.sansserif = '"sans-serif"'),
+              (e.comicsans = '"Comic Sans MS"'),
               (e.timesNewRoman = '"Times New Roman"'),
               (e.courierNew = '"Courier New"'),
-              (e.LucidaConsole = '"Lucida Console"'),
-              (e.monospace = '"monospace"');
+              (e.lucidaConsole = '"Lucida Console"'),
+              (e.verdana = "Verdana"),
+              (e.calibri = "Calibri")
           })(n || (t.tipoFuente = n = {}));
       },
       41: (e, t, n) => {
@@ -7333,9 +7343,23 @@
                     var m = a[p],
                       v = m.$from,
                       g = m.$to;
-                    if (l){ c.removeMark(v.pos, g.pos, e);
+                    if (l)
+                    { //aqui se remueve primero el estilo que se va a aplicar para colocar el nuevo
+                      c.removeMark(v.pos, g.pos, e);
+                      //se asigna el estilo teniendo en cuenta de que posicion a que posicion (si esta seleccionado textgo)
+                      if(e.name !== "strong" && e.name !== "em")
+                        {
+                          var y = v.pos,
+                          k = g.pos,
+                          w = v.nodeAfter,
+                          b = g.nodeBefore,
+                          S = w && w.isText ? /^\s*/.exec(w.text)[0].length : 0,
+                          x = b && b.isText ? /\s*$/.exec(b.text)[0].length : 0;
+                          y + S < k && ((y += S), (k -= x)),
+                          c.addMark(y, k, e.create(t));
+                        }
                     }
-                    else {
+                    else { //solo se asigna el estilo ya que no contaba con uno anteriormente
                       // console.log("entro aqui");
                       var y = v.pos,
                         k = g.pos,
@@ -8912,7 +8936,7 @@
                             //enviamos el parametro "" en la funcion R para que limpie todas las clases de los div
                             // console.log("entro al primer if del update");
                             var i = (o && t.active(e)) || !1;
-                            if (oculto.value === n.title) {
+                            if (oculto.value === n.title && n.title !== "Negrita" && n.title !== "Cursiva") {
                               // console.log("entro al primer bloque del if", n, oculto.value);
                               R(n, m + "-active", 1); // mandamos 1 ya que queremos que se active
                               // console.log(n,m,i);
@@ -9080,7 +9104,8 @@
         function x(e, t) {
           return function (n) {
             for (var r = !1, o = 0; o < e.length; o++) {
-              var i = e[o](n);
+              
+              var i = e[o](n); //cuando  o es 0 es cuando toma el boton de Negrita
               (t[o].style.display = i ? "" : "none"), i && (r = !0);
             }
             return r;

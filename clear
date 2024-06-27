@@ -1,0 +1,53 @@
+[33mcommit 8b4cac1fda3545d9322cb73a8b9385615a0cd0b7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Luis Mendez <col8rg@gmail.com>
+Date:   Mon Jun 24 20:15:52 2024 -0600
+
+    permite cargar html con estilos
+
+[33mcommit 46c195aaddf257f15df98c091fdecbfc2696eb53[m
+Author: Luis Mendez <col8rg@gmail.com>
+Date:   Wed Feb 7 16:31:16 2024 -0600
+
+    correccion de fin de pagina y manejo de eventos
+
+[33mcommit 1ef87a04780a699e58cff7933e1b7190c0573ca7[m
+Author: Luis Mendez <col8rg@gmail.com>
+Date:   Fri Feb 2 18:57:53 2024 -0600
+
+    se agrego funcionalidad de nueva pagina agregando imagen como bloque para luego ser recorrido el html y seccionar
+
+[33mcommit 086fd815105f7e3a26130fa318fa6fbdfbb15d8c[m
+Author: Luis Mendez <col8rg@gmail.com>
+Date:   Wed Jan 31 18:52:24 2024 -0600
+
+    Cambios al boton Nueva Pagina
+
+[33mcommit 0cbd4d650ec3127949f0d75484eb08f0b0c423ad[m
+Author: Luis Mendez <col8rg@gmail.com>
+Date:   Thu Jan 18 10:19:25 2024 -0600
+
+    "se cambio letra N por icono de nueva pagina"
+
+[33mcommit c9dc601f7c5c797525289768b021b8f47012efcb[m
+Author: Luis Mendez <col8rg@gmail.com>
+Date:   Wed Jan 17 18:09:42 2024 -0600
+
+    integracion de un nuevo boton llamado N
+
+[33mcommit 776a270187fc7dcc6402cf102c375cb84b0773fa[m
+Author: Mendez <corplmendez@consultoria.local>
+Date:   Thu May 11 16:11:56 2023 -0600
+
+    Actualizacion por error al seleccionar un item del listado del div y no hacer el cambio hasta el segundo intento
+
+[33mcommit 35b9957961cf8da626bb8eb53d523ecb0b4340b1[m
+Author: Mendez <corplmendez@consultoria.local>
+Date:   Thu May 11 11:51:03 2023 -0600
+
+    carga inicial de los archivos del proyecto
+
+[33mcommit 38c8e2e1894e8fea6096933560fba910e28f6a0f[m
+Author: Luis Mendez <123486585+col8mendez@users.noreply.github.com>
+Date:   Thu May 11 11:30:08 2023 -0600
+
+    Initial commit

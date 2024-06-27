@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded",function() {
    
 
 var npagina = document.getElementById("npagina");
+
 npagina.addEventListener("click", function() {
 
    
@@ -120,7 +121,5 @@ function LimpiarNodoFinPagina()
       }
    }
 }
-
-
 }
 )
