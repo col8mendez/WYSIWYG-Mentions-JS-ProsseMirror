@@ -8914,7 +8914,7 @@
                         // console.log(n.title);
                         //  console.log(n);
                         // console.log(e.state, e.dispatch, e, r);
-                        // dveditor.focus();                        
+                        dveditor.focus();                        
                       }),
                       {
                         // aqui pasa primero antes del return de la linea 8791
@@ -13476,7 +13476,7 @@
             span: {//se agrego para que el editor lograra interpretar los bloques de span ya que los eliminaba 
               inline: true,
               group: "inline",
-              content: "inline*", //
+              content: "inline+", //
               attrs: {
                 id: { default:null},
                 style: {default:null},

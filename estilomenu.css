@@ -15,9 +15,11 @@
 p{
     /* border-radius: 5px;
     box-shadow: 1px 1px 5px gray; /* offsetX, offsetY, blurRadius, color */
-    /* padding: 10px; Añadir un poco de espacio alrededor del contenido del párrafo */ 
-    margin-bottom: 0px;
-    margin-top: 0px;
+    padding: 0px; /*Añadir un poco de espacio alrededor del contenido del párrafo*/
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin: 0px;
+    line-height: 1;
     /* text-align: justify; */
     
 }
