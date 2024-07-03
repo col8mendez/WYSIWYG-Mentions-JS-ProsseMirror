@@ -1680,8 +1680,10 @@
           }
           matchFragment(e, t = 0, n = e.childCount) {
             let r = this;
-            for (let o = t; r && o < n; o++) r = r.matchType(e.child(o).type);
-            return r;
+            for (let o = t; r && o < n; o++) 
+              r = r.matchType(e.child(o).type);
+              return r;
+            
           }
           get inlineContent() {
             return 0 != this.next.length && this.next[0].type.isInline;
@@ -8907,11 +8909,12 @@
                         //   e.state.storedMarks.pop();
                         // console.log(e.state.storedMarks);
                         // n.classList.contains(m + "-disabled") ||
+                        
                         t.run(e.state, e.dispatch, n, r); //aqui setea el cambio de tamaño de fuente
                         // console.log(n.title);
                         //  console.log(n);
                         // console.log(e.state, e.dispatch, e, r);
-                        dveditor.focus();
+                        // dveditor.focus();                        
                       }),
                       {
                         // aqui pasa primero antes del return de la linea 8791
@@ -9029,15 +9032,11 @@
                     r.addEventListener("mouseup", function (e) {
                       selcmb.value = r.id;
                       // console.log("e",e,"t",t,"s",s)
-                      e.preventDefault(),
-                        k(e),
-                        i
-                          ? a()
-                          : ((i = t.expand(o, n.dom)),
+                      e.preventDefault(), k(e), i ? a() : ((i = t.expand(o, n.dom)),
                             window.addEventListener(
                               "mouseup",
                               (s = function (e) {  
-                                // console.log("aqui",e.target.id,"oculto");  validamos el id para que no se oculte el div de items cuando se le de clic
+                                // console.log("aqui",e.target.id,"oculto");//validamos el id para que no se oculte el div de items cuando se le de clic
                                 if (!(e.target.id === dvoculto.value))                              
                                 w(o) || a();
                                 dveditor.focus();
@@ -11392,23 +11391,35 @@
                 {
                   key: "matchFragment",
                   value: function (e) {
-                    for (
-                      var t =
-                          arguments.length > 1 && void 0 !== arguments[1]
-                            ? arguments[1]
-                            : 0,
-                        n =
-                          arguments.length > 2 && void 0 !== arguments[2]
-                            ? arguments[2]
-                            : e.childCount,
-                        r = this,
-                        o = t;
+                    for (var t  = arguments.length > 1 && 
+                        void 0 !== arguments[1] ? arguments[1] : 0, 
+                        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.childCount, r = this, o = t;
                       r && o < n;
                       o++
                     )
+                    // console.log(e.child(o).type);
                       r = r.matchType(e.child(o).type);
                     return r;
                   },
+                  // key: "matchFragment",
+                  // value: function(e) {
+                  //   let r = this;
+                    
+                  //   if (!e || !e.child) {
+                  //     throw new Error("Invalid input: 'e' must have a 'child' method");
+                  //   }
+                  //   var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+                  //   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.childCount;
+
+                  //   if (t < 0 || (t >= e.childCount && n < 0) || n > e.childCount) {
+                  //     throw new Error("Invalid indices: 't' and 'n' must be within the range of 'e.childCount'");
+                  //   }
+                    
+
+                  //   for (let o = t; r && o < n; o++) {
+                  //     r = r.matchType(e.child(o).type);
+                  //   }
+                  // },
                 },
                 {
                   key: "inlineContent",
@@ -13465,22 +13476,22 @@
             span: {//se agrego para que el editor lograra interpretar los bloques de span ya que los eliminaba 
               inline: true,
               group: "inline",
-              content: "inline",
+              content: "inline*", //
               attrs: {
                 id: { default:null},
                 style: {default:null},
-                },
+                },                
                 parseDOM: [
                   {
                     tag: "span",
                     getAttrs: function(dom) {
                       return{
                         id: dom.getAttribute("id"),
-                        style: dom.getAttribute("style")
+                        style: dom.getAttribute("style"),
                       };
                     }
-                  }
-                ],
+                  },                                
+                ],              
                 toDOM: function(node){
                   let spn = node.attrs;
                   return ["span", {id: spn.id, style: spn.style}, 0]
@@ -14744,6 +14755,7 @@
               {
                 key: "selection",
                 get: function () {
+                  // console.log("seleccion");
                   return (
                     this.curSelectionFor < this.steps.length &&
                       ((this.curSelection = this.curSelection.map(
@@ -14758,10 +14770,14 @@
               {
                 key: "setSelection",
                 value: function (e) {
+                  // console.log("Set Seleccion");
                   if (e.$from.doc != this.doc)
                     throw new RangeError(
                       "Selection passed to setSelection must point at the current document"
                     );
+
+                    // console.log("e", e , "steps", this.steps.length, this);
+                    
                   return (
                     (this.curSelection = e),
                     (this.curSelectionFor = this.steps.length),
@@ -24522,9 +24538,30 @@
         //   { name: "Juan Pérez", id: 108, email: "jperez@canella.com.gt" },
         // ])
       );
+      //se comenta por pruebas de cargar html desde el inicio, ejemplo de como parsear con el esquema y cargarlo al editor
+      // let htmlstring = '<p><span style="font-size: 10.5px;">YO MARGARITA LIMA VASQUEZ</span></p>';
+
+      // const container = document.createElement("div");
+      // container.innerHTML = htmlstring;
+
+      // const docNode = e.DOMParser.fromSchema(h).parse(container);
+      // const newState = r.EditorState.create({
+      //   doc: docNode,
+      //   schema: h, plugins: f
+      // });
+      // var d = r.EditorState.create({doc: docNode, schema: h, plugins: f });
+      var d = r.EditorState.create({schema: h, plugins: f });
+      new o.EditorView(document.body, { state: d }); 
 
 
-      var d = r.EditorState.create({ schema: h, plugins: f });
-      new o.EditorView(document.body, { state: d });
+      // function actualizarvista(objetoStringHtml){
+      
+
+ 
+
+      // }
+
+
+
     })();
 })();
