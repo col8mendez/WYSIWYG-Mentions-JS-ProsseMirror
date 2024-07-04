@@ -27,12 +27,77 @@
         }
     }  
 
+    function validaTextoenNodos(span)
+    {
+        let hasText = false;
+        for (let node of span.childNodes) {
+            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+            hasText = true;
+            break;
+            }
+        }
+        return hasText;
+    }
+
+    function validaTextoenNodoSiguiente(span)
+    {
+        let valido = false;
+        for (let node of span.childNodes) {
+            if(node.nodeName.toLowerCase() === "span")
+            {
+                for(let nodeSpan of node.childNodes)
+                {
+                    if (nodeSpan.nodeType === Node.TEXT_NODE ) {
+                        valido = true;
+                    break;
+                    }
+                }
+            }
+        }
+        return valido;
+    }
+    
+
+    function remueveSpanVacios(){
+        let editorDiv = document.getElementById('dvEditor');
+        let spansdvEditor = editorDiv.querySelectorAll('span');
+
+        spansdvEditor.forEach(span =>{
+
+            let hasText = validaTextoenNodos(span);
+            
+
+             // Evaluar si el span tiene texto y tiene otro span
+            let hasChildSpan = Array.from(span.childNodes).some(node => node.nodeName.toLowerCase() === 'span');
+            let hasTextNexNode = validaTextoenNodoSiguiente(span);
+            if((!hasText && hasChildSpan && !hasTextNexNode && span.childNodes.length > 0))               
+            {
+                eliminarSpan(span);
+            }
+        })
+    }
+
+    function eliminarSpan(span)
+    {
+        const p = document.createElement("p");
+
+                while(span.firstChild)
+                {
+                    p.appendChild(span.firstChild);
+                }
+
+                span.parentNode.replaceChild(p,span);
+    }
+
     let editor = document.getElementById("dvEditor");
     editor.addEventListener("input", validateAndAddFirstParagraph);
     editor.addEventListener("blur", validateAndAddFirstParagraph);
     editor.addEventListener("keyup", validateAndAddFirstParagraph);
     editor.addEventListener("mouseup", validateAndAddFirstParagraph);
-
+    // editor.addEventListener("keyup", remueveSpanVacios);
+    editor.addEventListener("mouseup", remueveSpanVacios);
+    // editor.addEventListener("focus", remueveSpanVacios);
+    
     validateAndAddFirstParagraph();
     validateAndAddLastParagraph();
 });
